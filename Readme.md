@@ -36,7 +36,7 @@ Questa programmazione va fatta premendo i tasti A,B,C o D appena resettato, poi 
 
 ## Cambio binario (funzione JOIN)
 
-Per passare dal binario 1 al binario 2 è necessario che i due circuiti siano uniti da un binario con una interruzione su entramble le rotaie (io l'ho fatto con un segheto da ferro); per il passaggio non serve unirle elettricamente, perché attivando la modalità "join" con il tasto 9, le tensioni dei due circuiti vengono prima azzerate e poi viene applicato lo stesso comando su entrambi i circuiti, permettendo al treno di passare da un binario all'altro in modo del tutto indolore.
+Per passare dal binario 1 al binario 2 è necessario che i due circuiti siano uniti da un binario con una interruzione su entramble le rotaie (io l'ho fatto con un seghetto da ferro); per il passaggio non serve unirle elettricamente, perché attivando la modalità "join" con il tasto 9, le tensioni dei due circuiti vengono prima azzerate e poi viene applicato lo stesso comando su entrambi i circuiti, permettendo al treno di passare da un binario all'altro in modo del tutto indolore.
 <img src="img/binario-tagliato.jpg" alt="Foto binario tagliato" >
 
 Quattro fusibili PTC autoripristinanti proteggono i circuiti da eventuali errori, come ad esempio il tentativo di cambiare binario senza aver prima premuto il tasto 9 — situazione che provocherebbe un cortocircuito tra le diverse tensioni.
