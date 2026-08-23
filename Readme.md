@@ -1,5 +1,7 @@
 # Remotino Nano Dual Rail
 
+<img src="img/copertina.jpg" alt="Copertina" >
+
 **Remotino Nano Dual Rail** è l'evoluzione naturale di Remotino Nano.
 
 ## Caratteristiche principali
