@@ -55,11 +55,20 @@ In caso di malfunzionamento dell'hardware è possibile inviare alcuni comandi da
 - r11 attiva rele1
 - r20 disattiva rele 2
 
-## Schema Generale
-Solo a titolo esemplificativo questo è lo schemone totale del controllo. Per realizzarlo è necessario aprire lo schema reale fatto in kicad.
+## Schema Generale per replicare il progetto
+Solo a titolo esemplificativo questo è lo schemone totale del controllo. Dove possibile vengono impegate schede o moduli commerciali. Per replicare il progetto fa fede lo schema reale, fatto in kicad (cartella kicad).
+Il PCB è in fase di costruzione, se sei interessato prenotane uno (viene dato "al costo").
 <img src="img/remotino-dual-rail-schema-v09.jpg" alt="Schemone generale" >
 
+## Tasto BOOST
+Sul telecomando premendo il tasto OK si attiva la funzione BOOST: all'ultimo circuito pilotato (o entrambi se siamo in modo JOIN) vengono dati brevi impulsi alla massima tensione: serve per quando abbiamo la velocità al minimo, ed il treno si ferma , o per una salita, o per problemi di carico elevato (numero di vagoni); questo dovrebbe sbloccare il treno e consentirgli di proseguire.
 
+## Sorgenti OPEN SOURCE
+Tutti i sorgenti per Arduino Nano e quelli per il "Remotino Display" sono open source disponibili nella cartella "Sorgenti".
 
 ## Istruzioni facili per i meno esperti
-Ho scritto una istruzione fatta passo-per-passo, che dovrebbe consentire di replicare il progetto a chiunque abbia un minimo di dimestichezza con Arduino. Scrivimi se incontri difficoltà. Cerca la cartella "Istruzioni facili"
+Ho scritto una istruzione fatta passo-per-passo, che dovrebbe consentire di replicare il progetto a chiunque abbia un minimo di dimestichezza con Arduino. Scrivimi se incontri difficoltà. Cerca la cartella "Istruzioni facili".
+
+## Prototipo
+Questa è l'immagine del primi prototipo, in attesa di una costruzione più seria quando ci sarà il pcb.
+<img src="img/Prototipo0.jpg" alt="Prototipo 0" >
