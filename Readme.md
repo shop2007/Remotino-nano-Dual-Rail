@@ -7,11 +7,15 @@
 - Controllo totale tramite telecomando a infrarossi
 - Due binari indipendenti, controllati in PWM sia per velocità che per direzione
 - Il controllo PWM consente velocità bassissime, realmente in scala 1:87, con partenze e fermate lente e graduali, proprio come un treno vero
-(VIDEO_LENTO-MP4)
+ 
+https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
+
+
 - Possibilità di unire temporaneamente i due circuiti per far passare un treno da un binario all'altro (funzione speciale join tasto 9)
 - Controllo di 8 relè per l'attivazione di scambi, luci o alimentazione di tronchini morti. Se usati per gli scambi, in modalità monostabile servono 2 relè per ogni scambio
 - Espandibilità verso schede da 8/16 relais con protocollo I2C
-<img src="img/XL9535-16rele-i2c" alt="Scheda 16 Relè IC bus Aliexp" >
+
+<img src="img/XL9535-16rele-i2c-bus.jpg" alt="Scheda 16 Relè IC bus Aliexp" >
 
 ## Modalità di configurazione degli 8 relè
 
