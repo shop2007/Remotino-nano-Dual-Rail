@@ -2,7 +2,7 @@
 
 <img src="img/copertina.jpg" alt="Copertina">
 
-**Remotino Nano Dual Rail** è l'evoluzione naturale di **Remotino Nano**: un sistema completo per il controllo di un plastico ferroviario in scala H0, basato su **Arduino Nano**, telecomando a infrarossi e controllo PWM dei due binari.
+**Remotino Nano Dual Rail** è l'evoluzione naturale di **Remotino Nano**: un sistema completo per il controllo di un plastico ferroviario, basato su **Arduino Nano**, telecomando a infrarossi e controllo PWM dei due binari.
 
 L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni analogici, mantenendo allo stesso tempo la possibilità di gestire scambi, luci e altre utenze del plastico.
 
