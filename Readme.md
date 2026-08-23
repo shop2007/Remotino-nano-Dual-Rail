@@ -4,7 +4,10 @@
 
 ## Caratteristiche principali
 
-- Controllo totale tramite telecomando a infrarossi
+- Controllo totale di un plastico con Trenini analogici (tipo LIMA), tramite telecomando a infrarossi
+
+<img src="img/tlc.jpg" alt="Telecomando usato" >
+  
 - Due binari indipendenti, controllati in PWM sia per velocità che per direzione
 - Il controllo PWM consente velocità bassissime, realmente in scala 1:87, con partenze e fermate lente e graduali, proprio come un treno vero
  
