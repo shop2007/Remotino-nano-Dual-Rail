@@ -14,7 +14,7 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 
 - Controllo di un plastico con **trenini analogici** (tipo LIMA) tramite telecomando a infrarossi.
 
-<img src="img/tlc.jpg" alt="Telecomando usato">
+
 
 - **Due binari indipendenti**, controllati in PWM sia per la velocità sia per la direzione.
 - Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
@@ -45,6 +45,8 @@ https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 Tutte le funzioni del sistema vengono gestite tramite i tasti del telecomando a infrarossi:
 
+<img src="img/tlc.jpg" alt="Telecomando usato">
+
 | Tasto | Funzione / Azione |
 | :--- | :--- |
 | **GO** | Attiva i motori (*primo tasto da premere per avviare i treni*). |
@@ -55,7 +57,7 @@ Tutte le funzioni del sistema vengono gestite tramite i tasti del telecomando a 
 | **VOL -** | Identico a `CH DOWN`, ma per il **Binario 2**. |
 | **OK** *(Tasto centrale)* | **Boost** alla massima velocità per il binario selezionato (entrambi se la funzione `JOIN` è attiva). |
 | **0** | Porta lentamente la velocità a 0 per il binario selezionato (entrambi se la funzione `JOIN` è attiva). |
-| **9** | Attiva / disattiva la modalità **JOIN** (unione temporanea dei due binari). |
+| **9** | Attiva la modalità **JOIN** (unione temporanea dei due binari). Si disattiva con **0**|
 | **1 – 8** | Aziona il rispettivo relè (da 1 a 8) del banco selezionato, in base alla modalità impostata (chiude temporaneamente in monostabile o inverte lo stato in bistabile). |
 | **A** | Seleziona il **Banco 1** di 8 relè (imposta `MODO_A` alla configurazione/reset). |
 | **B** | Seleziona il **Banco 2** di 8 relè (imposta `MODO_B` alla configurazione/reset). |
