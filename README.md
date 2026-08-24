@@ -2,7 +2,7 @@
 
 <img src="img/copertina.jpg" alt="Copertina">
 
-**Remotino Nano Dual Rail** è l'evoluzione naturale di **Remotino Nano**: un sistema completo per il controllo di un plastico ferroviario, basato su **Arduino Nano**, telecomando a infrarossi e controllo PWM dei due binari.
+**Remotino Nano Dual Rail** è l'evoluzione naturale di **Remotino Nano**: un sistema completo per il controllo di un plastico ferroviario in scala H0, basato su **Arduino Nano**, telecomando a infrarossi e controllo PWM dei due binari.
 
 L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni analogici, mantenendo allo stesso tempo la possibilità di gestire scambi, luci e altre utenze del plastico.
 
@@ -17,7 +17,7 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 <img src="img/tlc.jpg" alt="Telecomando usato">
 
 - **Due binari indipendenti**, controllati in PWM sia per la velocità sia per la direzione.
-- Il controllo PWM consente velocità molto basse, realmente in scala, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
+- Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
 
 https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
@@ -41,7 +41,30 @@ https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 ---
 
-## 2. Architettura del sistema
+## 2. Mappa comandi del telecomando
+
+Tutte le funzioni del sistema vengono gestite tramite i tasti del telecomando a infrarossi:
+
+| Tasto | Funzione / Azione |
+| :--- | :--- |
+| **GO** | Attiva i motori (*primo tasto da premere per avviare i treni*). |
+| **POWER ON** | Ferma immediatamente tutti i treni (Arresto d'emergenza). |
+| **CH UP** | Seleziona marcia avanti su **Binario 1** ed aumenta progressivamente la velocità. Se era selezionata la marcia indietro, riduce la velocità fino ad invertire in marcia avanti. |
+| **CH DOWN** | Seleziona marcia indietro su **Binario 1** ed aumenta progressivamente la velocità. Se era selezionata la marcia avanti, riduce la velocità fino ad invertire in marcia indietro. |
+| **VOL +** | Identico a `CH UP`, ma per il **Binario 2**. |
+| **VOL -** | Identico a `CH DOWN`, ma per il **Binario 2**. |
+| **OK** *(Tasto centrale)* | **Boost** alla massima velocità per il binario selezionato (entrambi se la funzione `JOIN` è attiva). |
+| **0** | Porta lentamente la velocità a 0 per il binario selezionato (entrambi se la funzione `JOIN` è attiva). |
+| **9** | Attiva / disattiva la modalità **JOIN** (unione temporanea dei due binari). |
+| **1 – 8** | Aziona il rispettivo relè (da 1 a 8) del banco selezionato, in base alla modalità impostata (chiude temporaneamente in monostabile o inverte lo stato in bistabile). |
+| **A** | Seleziona il **Banco 1** di 8 relè (imposta `MODO_A` alla configurazione/reset). |
+| **B** | Seleziona il **Banco 2** di 8 relè (imposta `MODO_B` alla configurazione/reset). |
+| **C** | Seleziona il **Banco 3** di 8 relè (imposta `MODO_C` alla configurazione/reset). |
+| **D** | Seleziona il **Banco 4** di 8 relè (imposta `MODO_D` alla configurazione/reset). |
+
+---
+
+## 3. Architettura del sistema
 
 Il progetto è organizzato attorno ad Arduino Nano, che gestisce:
 
@@ -57,7 +80,7 @@ Per la realizzazione pratica vengono utilizzati, dove possibile, **moduli e sche
 
 ---
 
-## 3. Configurazione degli 8 relè
+## 4. Configurazione degli 8 relè
 
 Gli 8 relè possono essere configurati in **quattro modalità**, in funzione dell'utilizzo previsto sul plastico.
 
@@ -81,11 +104,11 @@ La configurazione scelta viene quindi **memorizzata nella EEPROM** e mantenuta a
 
 ---
 
-## 4. Cambio binario — funzione JOIN
+## 5. Cambio binario — funzione JOIN
 
 La funzione **JOIN** permette di far passare un treno dal binario 1 al binario 2 evitando il collegamento diretto fra due circuiti che possono trovarsi a tensioni differenti.
 
-### 4.1 Preparazione del collegamento
+### 5.1 Preparazione del collegamento
 
 Per consentire fisicamente il passaggio del treno, i due circuiti devono essere collegati da un tratto di binario che presenti una **interruzione su entrambe le rotaie**.
 
@@ -95,7 +118,7 @@ Nel prototipo questa interruzione è stata realizzata con un seghetto da ferro.
 
 Non è necessario unire elettricamente i due circuiti: è proprio la funzione JOIN a gestire temporaneamente le loro tensioni.
 
-### 4.2 Funzionamento
+### 5.2 Funzionamento
 
 Premendo il **tasto 9**:
 
@@ -107,7 +130,7 @@ Premendo il **tasto 9**:
 
 In questo modo il passaggio avviene senza applicare direttamente al treno due tensioni differenti.
 
-### 4.3 Protezione
+### 5.3 Protezione
 
 Quattro **fusibili PTC autoripristinanti** proteggono i circuiti da eventuali errori.
 
@@ -115,7 +138,7 @@ Un esempio particolarmente importante è il tentativo di cambiare binario **senz
 
 ---
 
-## 5. Funzione BOOST
+## 6. Funzione BOOST
 
 La funzione **BOOST** è pensata per i casi in cui il treno, viaggiando alla velocità minima, tende a fermarsi.
 
@@ -136,7 +159,7 @@ L'impulso ha lo scopo di **sbloccare il treno e consentirgli di riprendere il mo
 
 ---
 
-## 6. Remotino Display
+## 7. Remotino Display
 
 Collegando Arduino Nano a una porta USB e avviando l'eseguibile **Remotino Display**, è possibile visualizzare sul PC lo stato del sistema.
 
@@ -154,7 +177,7 @@ Il Remotino Display è quindi particolarmente utile per il controllo e il monito
 
 ---
 
-## 7. Debug e verifica dell'hardware
+## 8. Debug e verifica dell'hardware
 
 In caso di malfunzionamento dell'hardware è possibile utilizzare il **monitor seriale di Arduino** per comandare direttamente i relè e verificarne il funzionamento.
 
@@ -179,9 +202,9 @@ Questa funzione consente di verificare i relè indipendentemente dal normale fun
 
 ---
 
-## 8. Schema generale e realizzazione hardware
+## 9. Schema generale e realizzazione hardware
 
-### 8.1 Schema generale
+### 9.1 Schema generale
 
 Lo schema seguente mostra, a titolo esemplificativo, l'architettura complessiva del sistema.
 
@@ -191,7 +214,7 @@ Per **replicare realmente il progetto** fa fede lo schema elettrico completo rea
 
 Dove possibile sono state impiegate schede e moduli commerciali, in modo da semplificare la costruzione e la reperibilità dei componenti.
 
-### 8.2 PCB
+### 9.2 PCB
 
 Il PCB è in fase di costruzione.
 
@@ -199,7 +222,7 @@ Se sei interessato a realizzarne uno, è possibile prenotarlo: viene fornito **a
 
 ---
 
-## 9. Prototipo
+## 10. Prototipo
 
 Questa è l'immagine del primo prototipo, realizzato come verifica preliminare del progetto.
 
@@ -209,7 +232,7 @@ Il prototipo verrà sostituito da una costruzione più definitiva con il PCB ded
 
 ---
 
-## 10. Sorgenti OPEN SOURCE
+## 11. Sorgenti OPEN SOURCE
 
 Tutti i sorgenti del progetto sono disponibili nella cartella **`Sorgenti`**.
 
@@ -222,7 +245,7 @@ Il progetto può quindi essere studiato, modificato e adattato alle proprie esig
 
 ---
 
-## 11. Istruzioni per la realizzazione
+## 12. Istruzioni per la realizzazione
 
 Per chi ha meno esperienza con Arduino è disponibile una guida **passo-passo** nella cartella **`Istruzioni facili`**.
 
@@ -232,7 +255,7 @@ In caso di difficoltà durante la realizzazione, è possibile segnalare il probl
 
 ---
 
-## 12. In sintesi
+## 13. In sintesi
 
 **Remotino Nano Dual Rail** riunisce in un unico sistema:
 
@@ -248,4 +271,3 @@ In caso di difficoltà durante la realizzazione, è possibile segnalare il probl
 - funzioni di **debug hardware**;
 - sorgenti open source;
 - documentazione passo-passo per la realizzazione.
-
