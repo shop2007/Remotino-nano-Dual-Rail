@@ -5,17 +5,17 @@ Guida pratica per chi parte da zero, basata sulle cartelle presenti nella reposi
 ## Software
 
 1. Scarica e installa **Arduino IDE 2** dal sito ufficiale arduino.cc.
-2. Apri Arduino IDE e carica lo sketch `.ino` che trovi nella cartella **"Arduino Sketch"**.
+2. Apri Arduino IDE e carica lo sketch `.ino` che trovi nella cartella **"Arduino Sketch"**. Assicurati di aver installato la libreria IRremote v. 2,7,0 di Shirriff (le versioni successive non funzionano con questo progetto).
 3. Prova a compilarlo (Verifica). Se l'IDE segnala una libreria mancante, installala dal **Library Manager** (icona libro a sinistra) e ricompila.
-4. Collega l'Arduino Nano al PC via USB, seleziona la scheda **"Arduino Nano"** e la porta seriale corretta, poi carica lo sketch sulla scheda.
-5. Apri il monitor seriale (velocità coerente con quella impostata nello sketch) e verifica che compaiano i messaggi diagnostici (es. `PWM1=`, `MOTN=`) quando invii un comando relè via seriale (es. `r11`, `r20`).
+4. Collega l'Arduino Nano al PC via USB, seleziona la scheda **"Arduino Nano"** e la porta seriale corretta, poi carica lo sketch sulla scheda. Attenzione, con i cloni è necessario installare il driver USB CH341SER.EXE scaricabile dal sito ufficiale WCH (WCH-IC) .
+5. Apri il monitor seriale a 115200 baud e verifica che compaiano i messaggi diagnostici (es. `PWM1=`, `MOTN=`) quando invii un comando relè via seriale (es. `r11`, `r20`).
 
 ## Hardware e schema
 
-6. Consulta lo schema generale nella cartella **"img"** per capire l'architettura complessiva del sistema (binari, relè, telecomando, alimentazione).
+6. Realizza il circuito che trovi nella cartella  **"img"** per capire l'architettura complessiva del sistema (binari, relè, telecomando, alimentazione).
 7. Se hai poca esperienza con Arduino ed elettronica, segui la guida passo-passo nella cartella **"Istruzioni semplici"**.
 8. Per la realizzazione elettrica reale (o per farti fare il PCB), apri lo schema completo nella cartella **"Kicad"** — serve installare KiCad se vuoi visualizzarlo o modificarlo.
-9. Realizza il cablaggio seguendo lo schema KiCad: alimentazione, i due circuiti binario, gli 8 relè, i 4 fusibili PTC.
+9. Realizza il cablaggio seguendo lo schema KiCad: alimentazione, i due circuiti binario, le schede relè, i 4 fusibili PTC.
 10. Inserisci l'Arduino Nano nello zoccolo/basetta predisposta.
 11. Se vuoi usare la funzione **JOIN**, taglia con un seghetto entrambe le rotaie nel punto di collegamento tra binario 1 e binario 2 (senza unirle elettricamente).
 
@@ -30,8 +30,8 @@ Guida pratica per chi parte da zero, basata sulle cartelle presenti nella reposi
 
 ## Remotino Display (opzionale ma consigliato)
 
-18. Installa Processing usando l'eseguibile nella cartella **"Processing installer"**.
-19. Apri lo sketch dentro **"Processing sketch"** e avvialo con l'Arduino collegato via USB, per visualizzare il pannello di stato (Motor On, direzione, JOIN, VU meter di potenza, stato dei 4 scambi).
+18. Installa Processing usando il link nella cartella **"Processing installer"** )versioni più aggiornate non compilano il sorgente).
+19. Apri lo sketch .pde dentro **"Processing sketch"** e avvialo con l'Arduino collegato via USB, per visualizzare il pannello di stato (Motor On, direzione, JOIN, VU meter di potenza, stato dei 4 scambi). Opzionalmente puoi provare direttamente il file .exe che trovi nella cartella **"Processing sketch\application.windows64"** .. non sempre funziona.
 
 ## Se qualcosa non funziona
 
