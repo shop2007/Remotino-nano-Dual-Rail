@@ -36,3 +36,17 @@ Guida pratica per chi parte da zero, basata sulle cartelle presenti nella reposi
 ## Se qualcosa non funziona
 
 20. Usa il monitor seriale per comandare i relè manualmente (`rXY`, es. `r11` accende il relè 1, `r20` spegne il relè 2) e isolare se il problema è hardware o software.
+
+## Appendice: elenco parti
+
+- Telecomando: Wallis Universal SME002 (trovato su ebay, vinted) - E' possibile usare qualsiasi telecomando ma serve modificare lo sketch con i codici corretti, e si rischia di ricevere disturbi da telecomandi tv, vcr ecc
+- Testina IR: vanno tutte bene, ma consiglio la LTM-8848 LITEON perchè è schermata ed ha una elevata sensibilità (trovata su ebay, vinted)
+- Arduino NANO (originale o clone)
+- Scheda 4 relè (2 pezzi) ( https://it.aliexpress.com/item/1005008364256415.html )
+- Scheda opzionale 8/16 relè I2C bus ( https://it.aliexpress.com/item/1005009629869016.html )
+- Scheda PWM L298 ( https://it.aliexpress.com/item/1005012997846403.html )
+- BC337
+- Resistori e trimmer vari
+- Connettori vari
+- Fusibili PTC da 2 amp (Littelfuse RUE110 oppure Bourns MF-R110)
+- PCB Remotino Nano Dual Rail (in preparazione, prenota il tuo)
