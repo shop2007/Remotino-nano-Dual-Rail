@@ -51,8 +51,8 @@ Tutte le funzioni del sistema vengono gestite tramite i tasti del telecomando a 
 | :--- | :--- |
 | **GO** | Attiva i motori (*primo tasto da premere per avviare i treni*). |
 | **POWER ON** | Ferma immediatamente tutti i treni (Arresto d'emergenza). |
-| **CH UP** | Seleziona marcia avanti su **Binario 1** ed aumenta progressivamente la velocità. Se era selezionata la marcia indietro, riduce la velocità fino ad invertire in marcia avanti. |
-| **CH DOWN** | Seleziona marcia indietro su **Binario 1** ed aumenta progressivamente la velocità. Se era selezionata la marcia avanti, riduce la velocità fino ad invertire in marcia indietro. |
+| **CH UP** | Se la potenza è 0 seleziona marcia avanti su **Binario 1** e/o aumenta progressivamente la velocità. Se era selezionata la marcia indietro, riduce la velocità fino ad invertire in marcia avanti. |
+| **CH DOWN** | Se la potenza è 0 seleziona marcia indietro su **Binario 1** e/o aumenta progressivamente la velocità. Se era selezionata la marcia avanti, riduce la velocità fino ad invertire in marcia indietro. |
 | **VOL +** | Identico a `CH UP`, ma per il **Binario 2**. |
 | **VOL -** | Identico a `CH DOWN`, ma per il **Binario 2**. |
 | **OK** *(Tasto centrale)* | **Boost** alla massima velocità per il binario selezionato (entrambi se la funzione `JOIN` è attiva). |
