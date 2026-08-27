@@ -23,13 +23,12 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 - **Due binari indipendenti**, controllati in PWM sia per la velocità sia per la direzione.
 - Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
 
+### 1.1.1 Video della bassa velocità
 https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
-1.1.1 Demo della bassa velocità
+### 1.1.2 Video della bassa velocità
 <video src="https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02" controls="controls" style="max-width: 100%;"></video>
- https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02
-1.1.2 Video
-https://github.com/user-attachments/assets/895bc5b1-9a05-45f5-8d09-2383bdeb205b
+
 
 
 
