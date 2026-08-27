@@ -26,8 +26,8 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 1.1.1 Demo della bassa velocità
-
-https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02 
+<video src="https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02" controls="controls" style="max-width: 100%;"></video>
+ https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02
 1.1.2 Video
 https://github.com/user-attachments/assets/895bc5b1-9a05-45f5-8d09-2383bdeb205b
 
