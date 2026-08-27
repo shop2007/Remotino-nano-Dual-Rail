@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/895bc5b1-9a05-45f5-8d09-2383bdeb205b
+
 # Remotino Nano Dual Rail
 
 <img src="img/copertina.jpg" alt="Copertina">
@@ -20,6 +24,11 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 - Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
 
 https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
+
+
+
+https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02
+
 
 ### 1.2 Gestione di scambi e utenze
 
@@ -118,7 +127,7 @@ Nel prototipo questa interruzione è stata realizzata con un seghetto da ferro.
 
 <img src="img/binario-tagliato.jpg" alt="Foto binario tagliato">
 
-Non è necessario unire elettricamente i due circuiti: è proprio la funzione JOIN a gestire temporaneamente le loro tensioni.
+Non è necessario unire elettricamente i due circuiti: è proprio la funzione JOIN che predispone Arduino a generare due tensioni identiche, permettendo il passaggio da un binario all'altro, senza problema alcuno.
 
 ### 5.2 Funzionamento
 
