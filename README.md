@@ -1,6 +1,6 @@
 
 
-https://github.com/user-attachments/assets/895bc5b1-9a05-45f5-8d09-2383bdeb205b
+
 
 # Remotino Nano Dual Rail
 
@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 
 
-https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02
+https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02 https://github.com/user-attachments/assets/895bc5b1-9a05-45f5-8d09-2383bdeb205b
 
 
 ### 1.2 Gestione di scambi e utenze
