@@ -1,7 +1,3 @@
-
-
-
-
 # Remotino Nano Dual Rail
 
 <img src="img/copertina.jpg" alt="Copertina">
@@ -17,9 +13,6 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 ### 1.1 Controllo dei treni
 
 - Controllo di un plastico con **trenini analogici** (tipo LIMA) tramite telecomando a infrarossi.
-
-
-
 - **Due binari indipendenti**, controllati in PWM sia per la velocità sia per la direzione.
 - Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
 
@@ -28,9 +21,6 @@ https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 ### 1.1.2 Video della bassa velocità
 <video src="https://github.com/user-attachments/assets/59c75386-90f1-46fd-8587-ddf0c4f8ac02" controls="controls" style="max-width: 100%;"></video>
-
-
-
 
 ### 1.2 Gestione di scambi e utenze
 
@@ -48,6 +38,7 @@ https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
 
 - Possibilità di unire temporaneamente i due circuiti per permettere il passaggio di un treno da un binario all'altro tramite la funzione **JOIN**.
 - Funzione **BOOST** per aiutare la partenza di un treno quando viaggia a velocità molto bassa, in salita o con un carico elevato.
+- Regolazione fine del comportamento dinamico tramite **5 potenziometri/trimmer**.
 - Protezione dei circuiti tramite **quattro fusibili PTC autoripristinanti**.
 
 ---
@@ -87,6 +78,7 @@ Il progetto è organizzato attorno ad Arduino Nano, che gestisce:
 - la funzione JOIN;
 - gli 8 relè;
 - la ricezione dei comandi dal telecomando;
+- la lettura dei potenziometri per la calibrazione della risposta dinamica;
 - la comunicazione seriale con il PC.
 
 Per la realizzazione pratica vengono utilizzati, dove possibile, **moduli e schede commerciali**. Lo schema generale riportato più avanti è quindi utile per comprendere l'architettura, mentre per una replica completa del progetto bisogna fare riferimento allo **schema reale KiCad** contenuto nella cartella `kicad`.
@@ -172,7 +164,28 @@ L'impulso ha lo scopo di **sbloccare il treno e consentirgli di riprendere il mo
 
 ---
 
-## 7. Remotino Display
+## 7. Regolazione tramite Potenziometri / Trimmer
+
+Sulla scheda sono presenti **5 potenziometri (o trimmer)** che consentono di personalizzare in modo preciso il comportamento dei treni e le rampe di accelerazione/frenata:
+
+1. **Valore Boost**  
+   Regola la durata/intensità dell'impulso di spunto al momento dell'avvio o alla pressione del tasto dedicato (`OK`), permettendo di superare gli attriti meccanici iniziali o i punti critici del plastico.
+
+2. **Valore Minimum Speed**  
+   Imposta il livello minimo del segnale PWM (velocità minima). Permette di definire la soglia alla quale la motrice inizia a muoversi senza ronzii o stalli del motore.
+
+3. **Accelerazione**  
+   Imposta la pendenza della rampa di accelerazione. Permette di determinare il tempo impiegato dal treno per raggiungere la velocità desiderata, simulando la tipica inerzia delle motrici reali.
+
+4. **Decelerazione**  
+   Regola la rampa di decelerazione standard durante le normali variazioni di velocità o cambi di marcia, garantendo rallentamenti morbidi e realistici.
+
+5. **Deceleraz. fermata automatica**  
+   Regola la rampa di arresto dedicata alle fermate automatiche (es. alla pressione del tasto `0` o in prossimità di stop pianificati). Permette di modulare la distanza di arresto per far fermare il treno in corrispondenza del punto desiderato.
+
+---
+
+## 8. Remotino Display
 
 Collegando Arduino Nano a una porta USB e avviando l'eseguibile **Remotino Display**, è possibile visualizzare sul PC lo stato del sistema.
 
@@ -190,7 +203,7 @@ Il Remotino Display è quindi particolarmente utile per il controllo e il monito
 
 ---
 
-## 8. Debug e verifica dell'hardware
+## 9. Debug e verifica dell'hardware
 
 In caso di malfunzionamento dell'hardware è possibile utilizzare il **monitor seriale di Arduino** per comandare direttamente i relè e verificarne il funzionamento.
 
@@ -215,9 +228,9 @@ Questa funzione consente di verificare i relè indipendentemente dal normale fun
 
 ---
 
-## 9. Schema generale e realizzazione hardware
+## 10. Schema generale e realizzazione hardware
 
-### 9.1 Schema generale
+### 10.1 Schema generale
 
 Lo schema seguente mostra, a titolo esemplificativo, l'architettura complessiva del sistema.
 
@@ -227,7 +240,7 @@ Per **replicare realmente il progetto** fa fede lo schema elettrico completo rea
 
 Dove possibile sono state impiegate schede e moduli commerciali, in modo da semplificare la costruzione e la reperibilità dei componenti.
 
-### 9.2 PCB
+### 10.2 PCB
 
 Il PCB è in fase di costruzione.
 
@@ -235,7 +248,7 @@ Se sei interessato a realizzarne uno, è possibile prenotarlo: viene fornito **a
 
 ---
 
-## 10. Prototipo
+## 11. Prototipo
 
 Questa è l'immagine del primo prototipo, realizzato come verifica preliminare del progetto.
 
@@ -245,7 +258,7 @@ Il prototipo verrà sostituito da una costruzione più definitiva con il PCB ded
 
 ---
 
-## 11. Sorgenti OPEN SOURCE
+## 12. Sorgenti OPEN SOURCE
 
 Tutti i sorgenti del progetto sono disponibili nella cartella **`Sorgenti`**.
 
@@ -258,7 +271,7 @@ Il progetto può quindi essere studiato, modificato e adattato alle proprie esig
 
 ---
 
-## 12. Istruzioni per la realizzazione
+## 13. Istruzioni per la realizzazione
 
 Per chi ha meno esperienza con Arduino è disponibile una guida **passo-passo** nella cartella **`Istruzioni facili`**.
 
@@ -268,13 +281,14 @@ In caso di difficoltà durante la realizzazione, è possibile segnalare il probl
 
 ---
 
-## 13. In sintesi
+## 14. In sintesi
 
 **Remotino Nano Dual Rail** riunisce in un unico sistema:
 
 - controllo indipendente di **due treni analogici**;
 - regolazione PWM della velocità e della direzione;
 - partenze e fermate progressive;
+- regolazione personalizzabile di **accelerazione, decelerazione, stop, min speed e boost** tramite 5 trimmer;
 - funzione **JOIN** per il passaggio fra i due circuiti;
 - funzione **BOOST** per facilitare la partenza dei treni;
 - gestione di **8 relè**, configurabili in quattro modalità;
