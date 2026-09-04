@@ -14,7 +14,7 @@ L'obiettivo del progetto è ottenere un controllo semplice ma preciso dei treni 
 
 - Controllo di un plastico con **trenini analogici** (tipo LIMA) tramite telecomando a infrarossi.
 - **Due binari indipendenti**, controllati in PWM sia per la velocità sia per la direzione.
-- Il controllo PWM consente velocità molto basse, realmente in scala 1:87, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
+- Il controllo PWM consente velocità molto basse, realmente in scala, con **partenze e fermate lente e graduali**, più simili al comportamento di un treno reale.
 
 ### 1.1.1 Video della bassa velocità
 https://github.com/user-attachments/assets/d638dfb1-e052-454d-9ad7-9dd413f32621
@@ -181,7 +181,7 @@ Sulla scheda sono presenti **5 potenziometri (o trimmer)** che consentono di per
    Regola la rampa di decelerazione standard durante le normali variazioni di velocità o cambi di marcia, garantendo rallentamenti morbidi e realistici.
 
 5. **Deceleraz. fermata automatica**  
-   Regola la rampa di arresto dedicata alle fermate automatiche (es. alla pressione del tasto `0` o in prossimità di stop pianificati). Permette di modulare la distanza di arresto per far fermare il treno in corrispondenza del punto desiderato.
+   Regola la rampa di arresto dedicata alle fermate automatiche (es. alla pressione del tasto `0` . Permette di variare la curva di decelerazione automatica fino all'arresto del treno.
 
 ---
 
@@ -232,7 +232,7 @@ Questa funzione consente di verificare i relè indipendentemente dal normale fun
 
 ### 10.1 Schema generale
 
-Lo schema seguente mostra, a titolo esemplificativo, l'architettura complessiva del sistema.
+Lo schema seguente mostra, a titolo esemplificativo, l'architettura complessiva del sistema (mancano i 5 trimmer/pot.).
 
 <img src="img/remotino-dual-rail-schema-v09.jpg" alt="Schemone generale">
 
@@ -242,9 +242,9 @@ Dove possibile sono state impiegate schede e moduli commerciali, in modo da semp
 
 ### 10.2 PCB
 
-Il PCB è in fase di costruzione.
+Il PCB è in fase di sviluppo.
 
-Se sei interessato a realizzarne uno, è possibile prenotarlo: viene fornito **al costo**.
+Se sei interessato ad averne uno, è possibile prenotarlo: viene fornito **al costo** e nudo (senza componenti).
 
 ---
 
@@ -266,6 +266,7 @@ Sono disponibili:
 
 - i sorgenti per **Arduino Nano**;
 - i sorgenti del programma **Remotino Display**.
+- gli schemi **Kicad**.
 
 Il progetto può quindi essere studiato, modificato e adattato alle proprie esigenze.
 
@@ -277,7 +278,7 @@ Per chi ha meno esperienza con Arduino è disponibile una guida **passo-passo** 
 
 La guida è stata pensata per consentire di replicare il progetto anche a chi possiede solo una conoscenza di base di Arduino e dell'elettronica.
 
-In caso di difficoltà durante la realizzazione, è possibile segnalare il problema per ricevere supporto.
+In caso di difficoltà durante la realizzazione, è possibile segnalare il problema per ricevere supporto ( LPAUTAS GMAIL).
 
 ---
 
