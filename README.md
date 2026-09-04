@@ -299,3 +299,5 @@ In caso di difficoltà durante la realizzazione, è possibile segnalare il probl
 - funzioni di **debug hardware**;
 - sorgenti open source;
 - documentazione passo-passo per la realizzazione.
+
+  ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=shop2007.Remotino-nano-Dual-Rail)
